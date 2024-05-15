@@ -67,11 +67,11 @@ int student::retrollno() const {
     return rollno;
 }
 
-//function declaration
+//объявление функции
 void create_student();
-void display_sp(int); //display particular record
-void display_all(); // display all records
-void delete_student(int); //delete particular record
+void display_sp(int); //показать конкретную запись
+void display_all(); //показать все записи
+void delete_student(int); //удалить запись
 void change_student(int);
 
 int main() {
@@ -119,7 +119,7 @@ int main() {
     return 0;
 }
 
-//write student details to file
+//запись данных в файл
 void create_student() {
     student stud;
     ofstream oFile;
@@ -132,7 +132,7 @@ void create_student() {
     cin.get();
 }
 
-// read file records
+// чтение записей
 void display_all() {
     student stud;
     ifstream inFile;
@@ -153,7 +153,7 @@ void display_all() {
     cin.get();
 }
 
-//read specific record based on roll number
+//прочтениеконкретной записи на основе номера зачетной книги
 void display_sp(int n) {
     student stud;
     ifstream iFile;
@@ -178,7 +178,7 @@ void display_sp(int n) {
     cin.get();
 }
 
-// modify record for specified roll number
+// изменение записи по указанному номеру зачетной книги
 void change_student(int n) {
     bool found = false;
     student stud;
@@ -210,7 +210,7 @@ void change_student(int n) {
     cin.get();
 }
 
-//delete record with particular roll number
+//удаление записи по номеру зачетной книги
 void delete_student(int n) {
     student stud;
     ifstream iFile;
